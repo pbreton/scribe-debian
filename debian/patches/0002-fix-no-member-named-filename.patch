@@ -1,0 +1,13 @@
+Index: facebook-scribe-63e4824/src/file.cpp
+===================================================================
+--- facebook-scribe-63e4824.orig/src/file.cpp	2012-01-07 01:25:04.000000000 +0800
++++ facebook-scribe-63e4824/src/file.cpp	2012-12-13 16:39:05.372247367 +0800
+@@ -245,7 +245,7 @@
+       boost::filesystem::directory_iterator dir_iter(path), end_iter;
+ 
+       for ( ; dir_iter != end_iter; ++dir_iter) {
+-        _return.push_back(dir_iter->filename());
++	_return.push_back(dir_iter->path().filename().string());
+       }
+     }
+   } catch (const std::exception& e) {

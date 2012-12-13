@@ -1,0 +1,25 @@
+Index: facebook-scribe-63e4824/src/Makefile.am
+===================================================================
+--- facebook-scribe-63e4824.orig/src/Makefile.am	2012-12-13 16:54:38.302512628 +0800
++++ facebook-scribe-63e4824/src/Makefile.am	2012-12-13 16:54:40.771746716 +0800
+@@ -34,7 +34,7 @@
+ #
+ THRIFT = $(thrift_home)/bin/thrift
+ THRIFT_INCLUDES = -I $(fb303_home)/share/
+-THRIFT_OPTS = $(THRIFT_INCLUDES) --gen cpp:pure_enums --gen py --gen php --gen java
++THRIFT_OPTS = $(THRIFT_INCLUDES) --gen cpp:pure_enums --gen py --gen php --gen java --gen perl
+ 
+ # User defined conditionals and conditonal statements set up in configure.ac.
+ # FACEBOOK set in configure.ac
+Index: facebook-scribe-63e4824/if/bucketupdater.thrift
+===================================================================
+--- facebook-scribe-63e4824.orig/if/bucketupdater.thrift	2012-01-07 01:25:04.000000000 +0800
++++ facebook-scribe-63e4824/if/bucketupdater.thrift	2012-12-13 17:09:51.859095199 +0800
+@@ -19,6 +19,7 @@
+ 
+ namespace cpp scribe.thrift
+ namespace java com.facebook.infrastructure.service
++namespace perl Scribe.Thrift
+ 
+ // BucketStoreMapping service exception
+ exception BucketStoreMappingException {
