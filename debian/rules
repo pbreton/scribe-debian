@@ -2,6 +2,33 @@
 
 export DH_OPTIONS
 
+PYVERS := $(shell pyversions -r)
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	./bootstrap.sh
+	./configure --with-thriftpath=/usr \
+		--with-fb303path=/usr \
+		--with-boost=/usr
+
+override_dh_auto_build:
+	cd src && make
+
+override_dh_auto_install:
+	cd src && make install DESTDIR=$(CURDIR)/debian/scribe
+
+	# Python
+	cd lib/py && \
+	for py in $(PYVERS); do \
+		$$py setup.py install --root=$(CURDIR)/debian/python-scribe \
+			--prefix=/usr --install-layout=deb; \
+	done
+
+	# Perl
+	mkdir -p $(CURDIR)/debian/libscribe-thrift-perl/usr/share/perl5
+	cp -r src/gen-perl/Scribe \
+		$(CURDIR)/debian/libscribe-thrift-perl/usr/share/perl5
+
+override_dh_auto_test:
