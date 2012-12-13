@@ -9,7 +9,8 @@ PYVERS := $(shell pyversions -r)
 
 override_dh_auto_configure:
 	./bootstrap.sh
-	./configure --with-thriftpath=/usr \
+	./configure --prefix=/usr \
+		--with-thriftpath=/usr \
 		--with-fb303path=/usr \
 		--with-boost=/usr
 
