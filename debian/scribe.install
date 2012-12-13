@@ -1,2 +1,2 @@
-usr/bin/scribed
+usr/bin/scribed		/usr/sbin
 debian/scribe.conf	/etc
