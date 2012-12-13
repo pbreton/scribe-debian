@@ -1,0 +1,4 @@
+version=3
+
+https://github.com/facebook/scribe/downloads \
+	/downloads/facebook/scribe/scribe-(\d+).(\d+)\.tar\.gz
