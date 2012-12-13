@@ -11,6 +11,7 @@ Build-Depends: debhelper (>= 8.0.0),
  libevent-dev,
  python-all,
  python-all-dev,
+ python-support (>= 0.90),
  python-fb303,
  perl (>= 5.8.0-7),
  libfacebook-fb303-perl
