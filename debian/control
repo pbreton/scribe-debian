@@ -1,0 +1,48 @@
+Source: scribe
+Section: net
+Priority: optional
+Maintainer: Gasol Wu <gasol.wu@gmail.com>
+Build-Depends: debhelper (>= 8.0.0),
+ libthrift-dev (>= 0.6.0),
+ thrift-compiler (>= 0.6.0),
+ libboost-dev (>= 1.36),
+ libboost-system-dev (>= 1.36),
+ libboost-filesystem-dev (>= 1.36),
+ python-all,
+ python-all-dev,
+ python-fb303,
+ perl (>= 5.8.0-7),
+ libfacebook-fb303-perl
+Standards-Version: 3.9.2
+Homepage: https://github.com/facebook/scribe
+Vcs-Git: git://github.com/facebook/scribe.git
+Vcs-Browser: https://github.com/facebook/scribe
+
+Package: scribe
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Facebook's distributed, streaming log server
+ Scribe is a server for aggregating log data streamed in real time
+ from a large number of servers. It is designed to be scalable,
+ extensible without client-side modification, and robust to failure of
+ the network or any specific machine.
+
+Package: python-scribe
+Architecture: any
+Section: python
+Depends: python, ${misc:Depends}
+Description: Python library for Scribe
+ Scribe is a server for aggregating log data streamed in real time
+ from a large number of servers. It is designed to be scalable,
+ extensible without client-side modification, and robust to failure of
+ the network or any specific machine.
+
+Package: libscribe-thrift-perl
+Architecture: any
+Section: perl
+Depends: ${misc:Depends}
+Description: Perl library for Scribe
+ Scribe is a server for aggregating log data streamed in real time
+ from a large number of servers. It is designed to be scalable,
+ extensible without client-side modification, and robust to failure of
+ the network or any specific machine.
