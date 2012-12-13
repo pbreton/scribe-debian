@@ -1,1 +1,2 @@
 usr/bin/scribed
+debian/scribe.conf	/etc
