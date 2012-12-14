@@ -1,3 +1,4 @@
 0001-THRIFT-1326.patch
 0002-fix-no-member-named-filename.patch
 0003-gen-perl-interface.patch
+0004-link-order-of-libraries.patch

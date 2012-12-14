@@ -1,0 +1,11 @@
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -104,7 +104,7 @@
+ if USE_SCRIBE_HDFS
+   scribed_SOURCES += HdfsFile.cpp
+ endif
+-scribed_LDADD = $(EXTERNAL_LIBS) $(INTERNAL_LIBS)
++scribed_LDADD = $(EXTERNAL_LIBS) $(INTERNAL_LIBS) $(BOOST_SYSTEM_LIB) $(BOOST_FILESYSTEM_LIB)
+ 
+ if SHARED
+ scribed_DEPENDENCIES = libscribe.so
