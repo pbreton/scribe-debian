@@ -3,6 +3,8 @@ Section: net
 Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
+ autoconf,
+ automake,
  thrift-compiler (>= 0.6.0),
  libboost-dev (>= 1.36),
  libboost-system-dev (>= 1.36),
