@@ -32,7 +32,8 @@ Description: Facebook's distributed, streaming log server
 Package: python-scribe
 Architecture: any
 Section: python
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${python:Depends}, ${misc:Depends},
+ python-fb303
 Description: Python library for Scribe
  Scribe is a server for aggregating log data streamed in real time
  from a large number of servers. It is designed to be scalable,
@@ -42,7 +43,8 @@ Description: Python library for Scribe
 Package: libscribe-thrift-perl
 Architecture: any
 Section: perl
-Depends: ${perl:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends},
+ libfacebook-fb303-perl
 Description: Perl library for Scribe
  Scribe is a server for aggregating log data streamed in real time
  from a large number of servers. It is designed to be scalable,
