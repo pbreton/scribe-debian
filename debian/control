@@ -3,6 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
+ libfb303-1, libfb303-dev,
  thrift-compiler (>= 0.6.0),
  libboost-dev (>= 1.36),
  libboost-system-dev (>= 1.36),
@@ -22,7 +23,7 @@ Vcs-Browser: https://github.com/facebook/scribe
 
 Package: scribe
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libthrift0
 Description: Facebook's distributed, streaming log server
  Scribe is a server for aggregating log data streamed in real time
  from a large number of servers. It is designed to be scalable,
