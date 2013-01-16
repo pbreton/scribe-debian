@@ -33,3 +33,8 @@ override_dh_auto_install:
 		$(CURDIR)/debian/libscribe-thrift-perl/usr/share/perl5
 
 override_dh_auto_test:
+
+override_dh_shlibdeps:
+	dpkg-shlibdeps --ignore-missing-info -Tdebian/scribe.substvars debian/scribe/usr/sbin/scribed
+
+
