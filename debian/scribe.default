@@ -1,1 +1,1 @@
-DAEMON_OPTS="-c /etc/scribe.conf"
+DAEMON_ARGS="-c /etc/scribe.conf"
