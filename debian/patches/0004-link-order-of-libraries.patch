@@ -1,6 +1,6 @@
---- a/src/Makefile.am
-+++ b/src/Makefile.am
-@@ -104,7 +104,7 @@
+--- a/src/Makefile.am.orig      2013-04-27 14:01:05.000000000 -0700
++++ b/src/Makefile.am   2013-04-27 14:06:29.825014410 -0700
+@@ -107,7 +107,7 @@
  if USE_SCRIBE_HDFS
    scribed_SOURCES += HdfsFile.cpp
  endif
@@ -8,4 +8,4 @@
 +scribed_LDADD = $(EXTERNAL_LIBS) $(INTERNAL_LIBS) $(BOOST_SYSTEM_LIB) $(BOOST_FILESYSTEM_LIB)
  
  if SHARED
- scribed_DEPENDENCIES = libscribe.so
+ scribed_DEPENDENCIES = libscribe.so libdynamicbucketupdater.so
