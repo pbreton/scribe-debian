@@ -4,12 +4,16 @@ Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
  libfb303-1, libfb303-dev,
+ autoconf,
+ automake,
  thrift-compiler (>= 0.6.0),
  libboost-dev (>= 1.36),
  libboost-system-dev (>= 1.36),
  libboost-filesystem-dev (>= 1.36),
  libthrift-dev (>= 0.6.0),
  libevent-dev,
+ libfb303-1,
+ libfb303-dev,
  python-all,
  python-all-dev,
  python-support (>= 0.90),
@@ -33,7 +37,8 @@ Description: Facebook's distributed, streaming log server
 Package: python-scribe
 Architecture: any
 Section: python
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${python:Depends}, ${misc:Depends},
+ python-fb303
 Description: Python library for Scribe
  Scribe is a server for aggregating log data streamed in real time
  from a large number of servers. It is designed to be scalable,
@@ -43,7 +48,8 @@ Description: Python library for Scribe
 Package: libscribe-thrift-perl
 Architecture: any
 Section: perl
-Depends: ${perl:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends},
+ libfacebook-fb303-perl
 Description: Perl library for Scribe
  Scribe is a server for aggregating log data streamed in real time
  from a large number of servers. It is designed to be scalable,
